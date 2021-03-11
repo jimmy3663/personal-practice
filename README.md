@@ -4,7 +4,7 @@
 gcloud auth login
 ```
 
-#GCP project 지정
+# GCP project 지정
 
 ```
 gcloud config set project [project-id]
