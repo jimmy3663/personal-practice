@@ -69,6 +69,6 @@ EOF
 ```
 kubectl -n kube-system describe secret $(kubectl -n kube-system get secret | grep admin-user | awk '{print $1}') 
 ```
-
-- Token 복사 후 dashboard 로그인! 기무리
+- http://127.0.0.1:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/#/login
+- 위 링크로 접속 후 Token 복사 후 dashboard 로그인! 기무리
 
