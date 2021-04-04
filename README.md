@@ -23,7 +23,7 @@ gcloud config set project [project-id]
 ## kube config 항복 생성 
 
 ```
-gcloud container cluster get-credentials [cluster name] --zone [zone 이름]
+gcloud container clusters get-credentials [cluster name] --zone [zone 이름]
 ```
 
 # Kubernetes Dashboard 
