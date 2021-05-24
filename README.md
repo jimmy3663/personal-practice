@@ -86,6 +86,5 @@ print(infer.structured_outputs)
 
 
 
-![image](https://user-images.githubusercontent.com/43136526/119310820-4354ea00-bcab-11eb-8309-7f8431ad1715.png)
 
 ```
