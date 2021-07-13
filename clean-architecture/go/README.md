@@ -13,4 +13,8 @@
 
 ## MSA Modeling
 
+<<<<<<< HEAD
 ![image](https://user-images.githubusercontent.com/43136526/125438507-ee1b4b3d-e3f8-456d-aff0-e90ef35a7375.png)
+=======
+![image](https://user-images.githubusercontent.com/43136526/125438507-ee1b4b3d-e3f8-456d-aff0-e90ef35a7375.png)
+>>>>>>> 5bb5301f760c8502db900c6aceed411797792d61
