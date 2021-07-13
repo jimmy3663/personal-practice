@@ -11,6 +11,6 @@
 - 위 5가지 fragment들이 Clean Architecture에서 말하는 Domain layer다.(아마?) 그리고 Rest API에 대한 handling이라던지 DB connection이라던지 이러한 것들은 Adapter layer라 한다.(라고 들었다. 사실 내가 찾아봤을 땐 adpater layer는 Domain layer -> Infra layer 혹은 Infra Layer -> Domain layer로 이동 시켜 주는 놈으로 나와 있었다.)
 - 여튼 위 다섯가지 부분 들에는 오직 비즈니스 로직만이 들어가야 하고 아래 단에 대한 로직은 들어가 있어도, 볼 수 있어도 안된다고 한다. 이는 사실 agile 기법에서 나온 것이라 유추 되는데 빠른 프로젝트 진행을 위해 비개발자들(소위 클라이언트)과 개발자들이 같이 많은 소통을 하며 구현을 할 때 비개발자들도 대략적인 코드를 보고 이해할 수 있어야 해서 라고 한다. (물론 아닐 수도 있지만 난 그렇게 생각하고 있다.)
 
-## MSA Modeling 
+## MSA Modeling
 
-[image](https://user-images.githubusercontent.com/43136526/125438507-ee1b4b3d-e3f8-456d-aff0-e90ef35a7375.png)
+![image](https://user-images.githubusercontent.com/43136526/125438507-ee1b4b3d-e3f8-456d-aff0-e90ef35a7375.png)
