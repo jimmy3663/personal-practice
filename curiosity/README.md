@@ -6,3 +6,4 @@
 - [ ] session이 정확하게..? 
 - [ ] OSI 7 layers 좀 더 깊이 
 - [ ] Repository pattern 
+- [ ] Stateless Token 및 JWT 보안
