@@ -1,6 +1,6 @@
 # 궁금한데 계속 까먹고 안보는 것들 
 
-- [ ] MVC pattern 
+- [x] MVC pattern 
 - [ ] database ddl 
 - [ ] database atomic operation 
 - [ ] session이 정확하게..? 
