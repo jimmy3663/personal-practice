@@ -48,3 +48,7 @@
 
 ### DI 
 - 객체 자체가 아니라 Framework에 의해 객체의 의존성이 주입되는 설계 패텬 
+
+## MVC pattern 
+
+- https://m.blog.naver.com/jhc9639/220967034588
