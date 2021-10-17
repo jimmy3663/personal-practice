@@ -8,4 +8,6 @@
 - [ ] Repository pattern 
 - [ ] Stateless Token 및 JWT 보안
 - [ ] Node.js async/await & promise 
+- [ ] SAGA pattern
+- [ ] CORS 
 
