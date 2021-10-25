@@ -70,3 +70,86 @@ int main() {
 
 - lower_bound, upper_bound (이진 탐색)
 
+## 순열 
+
+- 4개 중 4개 중복 없는 순열 
+
+```c++
+#include <iostream>
+#include <algorithm>
+#include <vector>
+
+using namespace std;
+
+int main(){
+	vecotr<int> v = {1,2,3,4};
+
+	do{
+		for(int i=0; i<v.size(); i++){
+			cout<<v[i]<<endl;
+		}
+	}
+	while(next_permutation(v.begin(), v.end()));
+}
+```
+
+- 4개 중 n개 중복 없는 순열 
+
+```c++
+#include <iostream>
+#include <vector>
+#include <algorithm>
+
+using namespace std;
+
+int main(){
+	vector<int> v = {1,2,3,4};
+
+	vector<int> temp = {1,1,0,0}; // 4개 중 2개 뽑는 형태 
+
+	do{
+		for(int i=0; i<v.size(); i++){
+			if(temp[i]==1){
+				cout<<v[i]<<endl;
+			}
+		}
+	}while(next_permutation(temp.begin(), temp.end()));
+}
+```
+
+- n개 중복 있는 순열 
+
+```c++ 
+#include <iostream>
+#include <vector>
+#include <algorithm>
+
+using namespace std;
+
+vector<string> vocab;
+string word = "AEIOU"; // 예를 들어 
+void recurr(string s, int length){
+	if(s.size() == length){
+		vocab.push_back(s);
+		return;
+	}
+	for(int i=0; i< n; i++){
+		recurr(s+word[i] , length);
+	}
+}
+
+int main(){
+
+
+
+	for(int i=1; i<=n; i++){
+		string s = "";
+		recurr(s, i);
+	}
+
+	for(int i=0; i< vocab.size(); i++){
+		cout<<vocab[i]<<endl;
+	}
+
+}
+```
