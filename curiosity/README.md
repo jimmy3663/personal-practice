@@ -1,6 +1,7 @@
 # 궁금한데 계속 까먹고 안보는 것들 
 
 - [x] MVC pattern 
+- [x] Kafka
 - [ ] database ddl 
 - [ ] database atomic operation 
 - [ ] session이 정확하게..? 
