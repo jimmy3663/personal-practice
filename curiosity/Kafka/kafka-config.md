@@ -2,7 +2,7 @@
 
 - Kafka 설정에 대해 써보려고 한다. 
 
-```
+```java
 public static Map<Object, Object> getConsumerProperties(String bootstrapServers) {
         Map<Object, Object> props = new HashMap<>();
         props.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, bootstrapServers);
@@ -50,6 +50,15 @@ public static Map<Object, Object> getConsumerProperties(String bootstrapServers)
 
 ### Consumer Config 
 
+- ConsumerConfig.ENABLE_AUTO_COMMIT : 해당 설정은 consumer가 message를 poll 해 올때 잘 가져왔다고 commit을 자동으로 할지 말지에 대한 설정이다. default는 true로 일정 시간이 지나면 자동으로 가져온 메세지에 대해 commit을 해준다. 하지만 메세지 하나하나가 중요할때는 수동 commit 방식으로 auto commit을 꺼주는것이 좋은 방법이다. 
+
+- ConsumerConfig.AUTO_OFFSET_RESET_CONFIG : 해당 설정은 consumer가 다시 올라왔을때(어플리케이션이 시작 되었을때) 어떤 offset부터 읽을 지를 설정해준다. 설정으론 Latest, earliest, none이 있다. Latest : 는 파티션 오프셋의 가장 마지막 오프셋에 위치하는 메세지부터 가져오는 것이고, earliest는 파티션 오프셋의 가장 처음 오프셋에 위치한 메세지 부터 가져오는 것이다. none은 파티션에 offset에 대한 정보가 있으면 해당 offset을 가져오고 없으면 에러를 뱉는다. 실시간성이 중요하다면 latest로, 컨슈머가 내려가 있을때 받은 메세지 또한 컨슘해야한다면 earliest, none은 잘 모르겠다. 
+
+(offset에 대해 쓸 이야기도 있는데 이 또한 trouble shooting에 기술 할 예정)
+
+- CosumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, VALUE_DESERIALIZER_CLASS_CONFIG : 해당 설정은 producer에서 serialize 해서 보내준 data를 역직렬화 할때 쓰이는 클래스를 명시해 주는 설정이다. 
+
+- JsonDeserializer.TRUSTED_PACKAGES : 해당 설정은 consumer에서 jsondeserializer를 사용할 때만 붙는 옵션, 즉 jsondeserializer의 옵션인데 이는 producer에서 보낸 message의 data가 class 형태로 오기 때문에 신뢰한 class들만 받기 위해 해당 옵션을 넣어놨다. (없으면 error나서...)
 
 
 
