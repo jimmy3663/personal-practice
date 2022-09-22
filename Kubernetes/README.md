@@ -1,3 +1,55 @@
+#K8s Imerpative Commends 
+
+## Pod
+
+```sh
+kubectl run nginx --image=nginx 
+```
+
+```sh
+kubectl create nginx --image=nginx -o yaml
+```
+
+## Deployment
+
+```sh
+kubectl create deploy nginx --image=nginx -o yml
+```
+
+### with replicas
+
+```sh
+kubectl create deploy nginx --image=nginx --replicas=4 
+```
+
+### editing replicas
+
+```sh
+kubectl scale deploy nginx --replicas=5
+```
+
+### create deploy and drop to yml
+
+```sh
+kubectl create deployment nginx --image=nginx --dry-run=client -o yaml > nginx-deployment.yaml
+```
+
+- --dry-run=client 는 반영 하지 않고 file만 드랍
+
+## Service
+
+```sh
+kubectl expose pod redis --port=6379 --name redis-service --dry-run=client -o yaml
+```
+
+### with expose 
+
+```sh
+kubectl expose pod nginx --type=NodePort --port=80 --name=nginx-service --dry-run=client -o yaml
+```
+
+
+
 # GCP 
 
 ## GCP 시작 
