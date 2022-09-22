@@ -1,4 +1,4 @@
-#K8s Imerpative Commends 
+# K8s Imerpative Commends 
 
 ## Pod
 
